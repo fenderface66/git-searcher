@@ -1,0 +1,51 @@
+/******************************************************************
+
+1030px and up
+
+******************************************************************/
+.container {
+    width: 1040px;
+    margin: 0 auto;
+}
+/*********************
+HEADER STYLES
+*********************/
+#inner-header {
+    width: 1000px;
+}
+#logo {
+    display: block;
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+.main-nav {
+    display: block;
+}
+/*********************
+RESPONSIVE NAV
+*********************/
+.hamburger {
+    display: none;
+}
+.responsive-nav {
+    display: none;
+}
+/*********************
+Flickr Feed
+*********************/
+.container {
+    .feed-container {
+        width: 830px;
+    }
+    .image-container {
+        margin-right: 20px;
+    }
+
+    .post-container {
+      .image-container {
+        width: 30%;
+        max-width: 400px;
+      }
+    }
+}

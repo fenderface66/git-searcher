@@ -1,0 +1,140 @@
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+@keyframes come-in {
+    to {
+        transform: translateY(0);
+    }
+}
+.come-down {
+    transform: translateY(-150px);
+    animation: come-in 0.8s ease forwards;
+    visibility: visible !important;
+}
+@keyframes come-down {
+    to {
+        transform: translateY(0);
+    }
+}
+.come-left {
+    transform: translateX(-150px);
+    animation: come-in 0.8s ease forwards;
+    visibility: visible !important;
+}
+@keyframes come-down {
+    to {
+        transform: translateX(0);
+    }
+}
+.come-right {
+    transform: translateX(150px);
+    animation: come-in 0.8s ease forwards;
+    visibility: visible !important;
+}
+@keyframes come-right {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes show {
+  0% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+.animation {
+  -webkit-transition: 1s;
+
+}
+
+.animation.ng-enter {
+  -webkit-animation:0.3s show;
+  animation:0.3s show;
+
+}
+
+.animation.ng-leave {
+  opacity: 1;
+  transition: .2s;
+}
+
+.animation.ng-enter.ng-enter-active {
+  -webkit-animation:.8s show;
+  animation:.8s show;
+
+}
+
+.animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+
+.animation.ng-enter-stagger {
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

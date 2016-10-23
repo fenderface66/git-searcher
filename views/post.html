@@ -1,0 +1,37 @@
+<div class="post-container fadeIn animated">
+    <div class="item-container animation" ng-model="loadingBay[post]" ng-show>
+
+        <div class="info-container">
+          <div class="info-top">
+            <h1><a target="_blank" href={{loadingBay[post].link}}>{{loadingBay[post].title}}</a></h1>
+            <a class="back" href="/#/">Back</a>
+          </div>
+            <ul>
+                <li><a href="https://www.flickr.com/photos/{{loadingBay[post].author_id}}" target="_blank">{{loadingBay[post].author[1]}}</a></li>
+                <li>Published: {{loadingBay[post].date_taken | date:'d' | ordinal}} {{ loadingBay[post].date_taken | date : "MMM yyyy 'at 'HH:mm" }}</li>
+            </ul>
+        </div>
+        <div class="content-container">
+            <div class="image-container">
+                <a target="_blank" href={{loadingBay[post].link}}><img src={{loadingBay[post].media.m}} alt="{{loadingBay[post].title}}"></a>
+            </div>
+            <div class="text-container">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel lorem vitae ligula luctus dapibus sed ut odio. In suscipit turpis eget erat rhoncus, vitae imperdiet diam dignissim. Vivamus eu nibh non erat dignissim dignissim non ultricies felis. Aliquam
+                    auctor ipsum arcu, mollis imperdiet enim lacinia ac. Quisque et neque mattis, commodo dui non, commodo odio.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="tag-container">
+          <h3>Tags</h3>
+            <ul>
+                <li ng-repeat="tag in loadingBay[post].tags">
+                    <a href="https://www.flickr.com/photos/tags/{{tag}}">{{tag}}</a>
+                </li>
+            </ul>
+        </div>
+          <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+    </div>
+</div>

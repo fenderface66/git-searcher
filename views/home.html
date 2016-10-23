@@ -1,0 +1,29 @@
+<div class="top-container">
+	<div class="title-container">
+		<h1>Git Hub Search</h1>
+	</div>
+	<form>
+		<input placeholder="Search by tags..." ng-keydown="loadMore(true)" ng-keyup="shouldFilter = true"  ng-model="search" type="search">
+	</form>
+
+</div>
+
+<div class="feed-container" scroll>
+	<div class="item-container animation" ng-repeat="(key, value) in items | filter: (shouldFilter ?  {tagString : search} : '')">
+
+		<div class="info-container">
+			<h2>
+				<a ng-click="$window.scrollTo(0, 0);" class="title-link" href=/#/post/#{{key}}>{{value.full_name}}</a>
+			</h2>
+			<p>Created: {{ value.created_at | date:'d' | ordinal}} {{ value.created_at | date : "MMM yyyy 'at 'HH:mm" }}</p>
+			<p>Forks: {{value.forks_count}}</p>
+			<p>Stargazers: {{value.stargazers_count}}</p>
+			<p>Issues: {{value.open_issues}}</p>
+			<ul>
+				<li><a href="https://www.flickr.com/photos/{{value.author_id}}" target="_blank">{{value.author[1]}}</a></li>
+				<li><a href="{{value.html_url}}"target="_blank">View on Github</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>

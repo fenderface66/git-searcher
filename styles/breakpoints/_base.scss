@@ -1,0 +1,273 @@
+/******************************************************************
+
+Mobile
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background-color: $light-gray;
+	color: $text-color;
+	font-family: $font;
+	font-size: 100%;
+	line-height: 1.5;
+}
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+/*********************
+LINK STYLES
+*********************/
+a,
+a:visited {
+	color: $link-color;
+	text-decoration: none;
+	/* on hover */
+	&:focus,
+	&:hover {
+		color: $link-hover;
+		text-decoration: underline;
+	}
+	/* on click */
+	&:active {}
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color: rgba( 0, 0, 0, 0.3 );
+	}
+}
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	a {
+		text-decoration: none;
+	}
+}
+.h1,
+h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+.h2,
+h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+.h3,
+h3 {
+	font-size: 1.75rem;
+}
+.h4,
+h4 {
+	font-size: 0.875rem;
+	font-weight: 700;
+}
+/*********************
+Flickr Feed
+*********************/
+.container {
+	text-align: center;
+	margin: 0 auto;
+	.top-container {
+		position: fixed;
+		background-color: $gray;
+		width: 100%;
+		left: 0;
+		z-index: 99999;
+		padding: 10px 0 14px;
+		h1 {
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-size: 1.4rem;
+		}
+	}
+	.title-container {
+		padding: 0 10px;
+	}
+	input[ng-model="search"] {
+		margin: 0 auto;
+	}
+	.image-container,
+	.info-container {
+		float: none;
+	}
+	.feed-container {
+		padding: 108px 5px 40px;
+		margin: 0 auto;
+
+		.image-container,
+		.info-container {
+			float: none;
+		}
+
+		.image-container {
+			margin: auto;
+			width: 80%;
+		}
+
+		.info-container {
+			text-align: center;
+			width: 100%;
+		}
+	}
+	.item-container {
+		margin: 30px 5px;
+		padding-bottom: 30px;
+		overflow-x: hidden;
+		border-bottom: 1px solid #5c6b80;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+	.image-container {
+		width: 30%;
+		margin-right: 4%;
+		padding-top: 5px;
+		img {
+			width: 100%;
+			border-radius: 5px;
+		}
+	}
+	.info-container {
+		width: 66%;
+		text-align: left;
+		h2 {
+			margin: 0;
+			font-size: 1.8rem;
+			line-height: 32px;
+		}
+		p {
+			margin-top: 2px;
+		}
+		ul li {
+			color: $black;
+			padding-left: 8px;
+			margin: 10px 0;
+			 a {
+				 text-decoration: underline;
+			 }
+
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.post-container {
+	text-align: left;
+	padding: 10px 6px;
+	.info-top {
+		padding-right: 66px;
+	}
+	.info-container {
+		clear: both;
+		float: none;
+		width: 100%;
+		h1 {
+			margin: 5px 0 0;
+			display: inline;
+			font-size: 1.6rem;
+			a {
+				text-decoration: none;
+			}
+		}
+		ul li {
+			padding-left: 0;
+			&:last-child {
+				color: $text-color;
+			}
+		}
+	}
+	.image-container {
+		width: 100%;
+	}
+	.tag-container {
+		h3 {
+			margin: 0 0 2px;
+		}
+		li {
+			display: inline-block;
+			margin: 4px 5px;
+		}
+
+		a {
+			text-decoration: underline;;
+		}
+	}
+	.info-top {
+		position: relative;
+	}
+
+	.back {
+		background-color: $gray;
+		padding: 5px 15px;
+		border-radius: 6px;
+		position: absolute;;
+		display: block;
+		top: 5px;
+		right: 0;
+		transition: 0.2s;
+		margin-bottom: 20px;
+		&:hover {
+			background-color: #d7d9de;
+		}
+	}
+}
+
+.g-plusone {
+	clear: both;
+}
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+	clear: both;
+	background-color: $black;
+	color: $light-gray;
+}
