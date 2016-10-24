@@ -7,7 +7,7 @@
      */
     angular
         .module('git-searcher', [
-            'ngRoute', 'ngAnimate'
+            'ngRoute', 'ngAnimate', "chart.js"
         ])
         .config(config)
         .filter('ordinal', function() {

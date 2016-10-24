@@ -2,15 +2,38 @@
     <div class="item-container animation" ng-model="loadingBay[post]" ng-show>
 
         <div class="info-container">
-          <div class="info-top">
-            <h1><a target="_blank" href={{loadingBay[post].link}}>{{loadingBay[post].full_name}}</a></h1>
-            <a class="back" href="/#/">Back</a>
-          </div>
-          <div class="issue-container" ng-repeat="(key, value) in issues">
-            <div class="issue">
-              <h2>{{value.title}}</h2>
-              <p>{{value.body}}</p>
+            <div class="info-top">
+                <h1><a target="_blank" href={{loadingBay[post].link}}>{{loadingBay[post].full_name}}</a></h1>
+                <a class="back" href="/#/">Back</a>
             </div>
-          </div></div>
+            <div class="chart-container">
+                <div class="chart">
+                    <h2>Forks</h2>
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+                    </canvas>
+                </div>
+                <div class="chart">
+                    <h2>Issues</h2>
+                    <canvas id="bar" class="chart chart-bar" chart-data="barData" chart-labels="labels">
+                    </canvas>
+                </div>
+            </div>
+
+            <div class="chart">
+                <h2>Stargazers</h2>
+                <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="labels" chart-options="options">
+                </canvas>
+              
+            </div>
+            
+            <div class="chart">
+                <h2>Score</h2>
+                <canvas id="base" class="chart-horizontal-bar"
+  chart-data="horData" chart-labels="labels" >
+</canvas> 
+              
+            </div>
+        </div>
     </div>
+</div>
 </div>
