@@ -84,7 +84,7 @@ p{-ms-word-wrap:break-word;word-break:break-word;word-wrap:break-word;-webkit-hy
 }
 @-webkit-keyframes show{0%{opacity:0;transform:scale(.5)}
 70%{transform:scale(1.02)}
-100%{opacity:1;transform:scale(1)}
+100%{opacity:1;transform:scale(1);border-bottom:1px solid #5c6b80}
 }
 .animation{-webkit-transition:1s}
 .animation.ng-enter{-webkit-animation:.3s show;animation:.3s show}
@@ -104,6 +104,7 @@ p{-ms-word-wrap:break-word;word-break:break-word;word-wrap:break-word;-webkit-hy
 .field,input[type=month],input[type=time],input[type=week],input[type=number],input[type=email],input[type=url],input[type=search],input[type=tel],input[type=color],input[type=text],input[type=password],input[type=datetime],input[type=datetime-local],input[type=date],select,textarea{display:block;height:40px;line-height:40px;padding:0 12px;margin-bottom:14px;font-size:1em;color:#5c6b80;border-radius:3px;vertical-align:middle;box-shadow:none;border:0;width:80%;max-width:400px;font-family:"Open Sans",Helvetica,Arial,sans-serif;background-color:#fff;-webkit-transition:background-color .24s ease-in-out;transition:background-color .24s ease-in-out}
 .field:active,.field:focus,input[type=month]:active,input[type=month]:focus,input[type=time]:active,input[type=time]:focus,input[type=week]:active,input[type=week]:focus,input[type=number]:active,input[type=number]:focus,input[type=email]:active,input[type=email]:focus,input[type=url]:active,input[type=url]:focus,input[type=search]:active,input[type=search]:focus,input[type=tel]:active,input[type=tel]:focus,input[type=color]:active,input[type=color]:focus,input[type=text]:active,input[type=text]:focus,input[type=password]:active,input[type=password]:focus,input[type=datetime]:active,input[type=datetime]:focus,input[type=datetime-local]:active,input[type=datetime-local]:focus,input[type=date]:active,input[type=date]:focus,select:active,select:focus,textarea:active,textarea:focus{background-color:#f7f8fa;outline:0}
 body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-color:#f8f9fa;color:#5c6b80;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-size:100%;line-height:1.5}
+.container .item-container:nth-child(even),.post-container .back{background-color:#eaedf2}
 html{height:100%;box-sizing:border-box}
 *,:after,:before{box-sizing:inherit}
 ul{list-style-type:none;margin:0;padding:0}
@@ -127,7 +128,7 @@ a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .container .feed-container .image-container,.container .feed-container .info-container{float:none}
 .container .feed-container .image-container{margin:auto;width:80%}
 .container .feed-container .info-container{text-align:center;width:100%}
-.container .item-container{margin:30px 5px;padding-bottom:30px;overflow-x:hidden;border-bottom:1px solid #5c6b80}
+.container .item-container{margin:30px 5px;padding:30px;overflow-x:hidden;backface-visibility:hidden}
 .container .item-container:first-child{margin-top:0}
 .container .item-container:last-child{margin-bottom:0;border-bottom:0;padding-bottom:0}
 .container .image-container{width:30%;margin-right:4%;padding-top:5px}
@@ -135,7 +136,7 @@ a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .container .info-container{width:66%;text-align:left}
 .container .info-container h2{margin:0;font-size:1.8rem;line-height:32px}
 .container .info-container p{margin-top:2px}
-.container .info-container ul li{color:#231f20;padding-left:8px;margin:10px 0}
+.container .info-container ul li{color:#231f20;margin:10px 0}
 .container .info-container ul li a{text-decoration:underline}
 .container .info-container ul li:first-child{margin-top:0}
 .container .info-container ul li:last-child{margin-bottom:0}
@@ -150,7 +151,7 @@ a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .post-container .tag-container h3{margin:0 0 2px}
 .post-container .tag-container li{display:inline-block;margin:4px 5px}
 .post-container .tag-container a{text-decoration:underline}
-.post-container .back{background-color:#eaedf2;padding:5px 15px;border-radius:6px;position:absolute;display:block;top:5px;right:0;transition:.2s;margin-bottom:20px}
+.post-container .back{padding:5px 15px;border-radius:6px;position:absolute;display:block;top:5px;right:0;transition:.2s;margin-bottom:20px}
 .post-container .back:hover{background-color:#d7d9de}
 .footer{background-color:#231f20;color:#f8f9fa}
 @media only screen and (min-width:481px){.container .feed-container .image-container,.container .feed-container .info-container,.container .post-container .tag-container{float:left}

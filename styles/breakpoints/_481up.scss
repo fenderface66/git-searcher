@@ -10,7 +10,7 @@ POSTS & CONTENT STYLES
 
 
 /*********************
-Flickr Feed
+GitHub Feed
 *********************/
 .container {
 	width: 480px;
@@ -25,13 +25,14 @@ Flickr Feed
 .feed-container {
 
 	.image-container, .info-container {
-		float: left;
+		float: left; 
 	}
 
 	.image-container {
 		margin: 0;
 		width: 30%;
 		margin-right: 20px;
+    backface-visibility: hidden;
 	}
 
 	.info-container {

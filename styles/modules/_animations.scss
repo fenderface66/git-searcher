@@ -1,43 +1,43 @@
 .come-in {
-    transform: translateY(150px);
-    animation: come-in 0.8s ease forwards;
-    visibility: visible !important;
-    opacity: 1 !important;
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 @keyframes come-in {
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(0);
+  }
 }
 .come-down {
-    transform: translateY(-150px);
-    animation: come-in 0.8s ease forwards;
-    visibility: visible !important;
+  transform: translateY(-150px);
+  animation: come-in 0.8s ease forwards;
+  visibility: visible !important;
 }
 @keyframes come-down {
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(0);
+  }
 }
 .come-left {
-    transform: translateX(-150px);
-    animation: come-in 0.8s ease forwards;
-    visibility: visible !important;
+  transform: translateX(-150px);
+  animation: come-in 0.8s ease forwards;
+  visibility: visible !important;
 }
 @keyframes come-down {
-    to {
-        transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
+  }
 }
 .come-right {
-    transform: translateX(150px);
-    animation: come-in 0.8s ease forwards;
-    visibility: visible !important;
+  transform: translateX(150px);
+  animation: come-in 0.8s ease forwards;
+  visibility: visible !important;
 }
 @keyframes come-right {
-    to {
-        transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes show {
@@ -65,6 +65,7 @@
   100% {
     opacity:1;
     transform: scale(1);
+    border-bottom: 1px solid #5c6b80;
   }
 }
 
@@ -76,7 +77,6 @@
 .animation.ng-enter {
   -webkit-animation:0.3s show;
   animation:0.3s show;
-
 }
 
 .animation.ng-leave {
@@ -96,11 +96,11 @@
 
 
 .animation.ng-enter-stagger {
-    -webkit-transition-delay: 1s;
-    transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
 
-    -webkit-transition-duration: 0s;
-    transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
 }
 
 @-webkit-keyframes fadeIn {

@@ -17,7 +17,7 @@
                 var docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
                 var windowBottom = windowHeight + window.pageYOffset;
                     windowBottom = Math.ceil(windowBottom);
-                if (windowBottom >= (docHeight - 30)) {
+                if (windowBottom >= (docHeight - 100)) {
                     scope.loadMore();
 
                 }

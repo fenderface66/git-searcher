@@ -44,8 +44,14 @@
 
         .when('/post', {
             templateUrl: 'views/post.html',
-            controller: 'MainController',
-            controllerAs: 'main'
+            controller: 'IssuesController',
+            controllerAs: 'issues'
+        })
+        
+        .when('/charts', {
+            templateUrl: 'views/charts.html',
+            controller: 'ChartsController',
+            controllerAs: 'charts'
         })
 
         .otherwise({

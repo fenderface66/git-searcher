@@ -101,14 +101,14 @@ h4 {
 	font-weight: 700;
 }
 /*********************
-Flickr Feed
+GitHub Feed
 *********************/
 .container {
 	text-align: center;
 	margin: 0 auto;
 	.top-container {
 		position: fixed;
-		background-color: $gray;
+		background-color: #427AA1;
 		width: 100%;
 		left: 0;
 		z-index: 99999;
@@ -150,9 +150,11 @@ Flickr Feed
 	}
 	.item-container {
 		margin: 30px 5px;
+    padding: 30px;
 		padding-bottom: 30px;
 		overflow-x: hidden;
-		border-bottom: 1px solid #5c6b80;
+
+    backface-visibility: hidden;
 		&:first-child {
 			margin-top: 0;
 		}
@@ -161,6 +163,9 @@ Flickr Feed
 			border-bottom: 0;
 			padding-bottom: 0;
 		}
+    &:nth-child(even) {
+      background-color: $grey;
+    }
 	}
 	.image-container {
 		width: 30%;
@@ -184,7 +189,6 @@ Flickr Feed
 		}
 		ul li {
 			color: $black;
-			padding-left: 8px;
 			margin: 10px 0;
 			 a {
 				 text-decoration: underline;
