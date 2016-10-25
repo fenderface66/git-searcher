@@ -1,28 +1,30 @@
 ## Installation
-1) Install node modules with
+1) Install dependencies with
+
 ```bash
 npm install
 ```
-
-2) To create build directory run (naturally this will not work locally due to path names, it is meant only for deployment. If you want to view locally run 'gulp' command)
+If this doesn't work you may need to globally install npm-install-missing and run it. This is because Phantom.JS sometimes disrupts the module installation process.
 ```bash
-gulp build
+npm install -g npm-install-missing
 ```
-3) To begin gulp development process or view app locally run
+Once installed you can run it with
+```bash
+npm-install-missing
+```
+
+2) To begin gulp development process or view app locally run
 ```bash
 gulp
 ```
-4) To begin e2e protractor testing run
+
+3) To begin e2e protractor testing run
 ```bash
 gulp test
 ```
 
-5) Start webserver without watch task
+4) Start webserver without watch task
 ```bash
 gulp server
 ```
 
-6) Start webserver from build folder
-```bash
-gulp server-build
-```

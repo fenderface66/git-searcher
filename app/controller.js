@@ -119,13 +119,9 @@
 
 
 	function ChartsController(LocalStorage, gitData, $scope, $location, $rootScope) {
-
+    window.scrollTo(0, 0)
 		var self = this;
-		if ($rootScope.fullName === undefined) {
-			$location.path("/")
-			$location.search({});
 
-		}
 		$scope.post = $location.hash();
 		$scope.data = [];
 		$scope.barData = [];

@@ -4,8 +4,8 @@ pre,textarea{overflow:auto}
 legend,td,th{padding:0}
 .cf:after,.footer{clear:both}
 .container,sub,sup{position:relative}
-.issue-container h2,p{word-break:break-word}
 .come-down,.come-in,.come-left,.come-right{animation:come-in .8s ease forwards;visibility:visible!important}
+.issue-container h2,p{word-break:break-word}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 .block,article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
@@ -122,7 +122,7 @@ a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .h4,h4{font-size:.875rem;font-weight:700}
 .container{text-align:center;margin:0 auto}
 .container .top-container{position:fixed;background-color:#427AA1;width:100%;left:0;z-index:99999;padding:10px 0 14px}
-.container .item-container:nth-child(even),.issue-container .back{background-color:#eaedf2}
+.container .item-container:nth-child(even),.info-container .back{background-color:#eaedf2}
 .container .top-container h1{margin-top:0;margin-bottom:10px;font-size:1.4rem}
 .container .title-container{padding:0 10px}
 .container .title-container h1{color:#fff}
@@ -142,11 +142,13 @@ a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .container .info-container ul li a{text-decoration:underline}
 .container .info-container ul li:first-child{margin-top:0}
 .container .info-container ul li:last-child{margin-bottom:0}
+.top-container .charts-link{color:#fff;font-size:1.2em;display:inline-block;position:absolute;right:20px;top:5px}
+.top-container .charts-link:hover{color:#fff}
+.info-container .back{padding:5px 15px;border-radius:6px;position:absolute;display:block;top:5px;right:0;transition:.2s;margin-bottom:20px}
+.info-container .back:hover{background-color:#d7d9de}
 .issue-container{text-align:left;padding:10px 6px}
 .issue-container .info-top{padding-right:66px}
 .issue-container .issue{max-width:1027px;position:relative;margin:30px 0}
-.issue-container .back{padding:5px 15px;border-radius:6px;position:absolute;display:block;top:5px;right:0;transition:.2s;margin-bottom:20px}
-.issue-container .back:hover{background-color:#d7d9de}
 .chart,.container .info-container .chart{margin:50px 0}
 .container .info-container .chart h2{font-size:2em;margin-bottom:30px}
 .footer{background-color:#231f20;color:#f8f9fa}

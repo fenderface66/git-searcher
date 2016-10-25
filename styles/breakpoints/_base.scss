@@ -214,6 +214,18 @@ GitHub Feed
   }
 }
 
+.top-container .stats-link {
+  color: white;
+  font-size: 1.2em;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  &:hover {
+    color: white;
+  }
+}
+
 .info-container {
   .back {
     background-color: $gray;
