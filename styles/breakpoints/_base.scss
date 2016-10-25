@@ -121,6 +121,9 @@ GitHub Feed
 	}
 	.title-container {
 		padding: 0 10px;
+    h1 {
+      color: white;
+    }
 	}
 	input[ng-model="search"] {
 		margin: 0 auto;
@@ -164,7 +167,7 @@ GitHub Feed
 			padding-bottom: 0;
 		}
     &:nth-child(even) {
-      background-color: $grey;
+      background-color: $gray;
     }
 	}
 	.image-container {

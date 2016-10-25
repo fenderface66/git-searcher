@@ -111,7 +111,7 @@ gulp.task('sass', function() {
         }))
         .on('error', $.notify.onError({
             title: 'SASS Failed',
-            message: 'Error(s) occurred during compile!'
+            message: 'Error: <%= error.message %>'
         }))
         .pipe($.sourcemaps.write())
         .pipe(gulp.dest('styles'))

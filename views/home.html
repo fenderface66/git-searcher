@@ -1,33 +1,33 @@
 <div class="top-container">
-	<div class="title-container">
-		<h1>Git Hub Search</h1>
-	</div>
-	<form>
-		<input placeholder="Search by tags..." ng-keydown="loadMore(true)" ng-keyup="shouldFilter = true"  ng-model="search" type="search">
-	</form>
+  <div class="title-container">
+    <h1>Git Hub Search</h1>
+  </div>
+  <form>
+    <input placeholder="Search by tags..." ng-keydown="loadMore(true)" ng-keyup="shouldFilter = true"  ng-model="search" type="search">
+  </form>
 
 </div>
 
 <div class="feed-container" scroll>
-	<div class="item-container animation" ng-repeat="(key, value) in items | filter: (shouldFilter ?  {full_name : search} : '')">
+  <div class="item-container animation" ng-repeat="(key, value) in items | filter: (shouldFilter ?  {full_name : search} : '')">
     <div class="image-container">
       <img src="{{value.owner.avatar_url}}" alt="">
     </div>
-		<div class="info-container">
-			<h2>
-				<a ng-click="$window.scrollTo(0, 0); getName(value.full_name)" class="title-link" ng-href=/#/post/#{{key}}>{{value.full_name}}</a>
-			</h2>
-			<p>Author: {{value.owner.login}}</p>
-			<p>Created: {{ value.created_at | date:'d' | ordinal}} {{ value.created_at | date : "MMM yyyy 'at 'HH:mm" }}</p>
-			<p>Forks: {{value.forks_count}}</p>
-			<p>Stargazers: {{value.stargazers_count}}</p>
-			<p>Issues: {{value.open_issues}}</p>
-			
-			<ul>
-				<li><a ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/charts/#{{key}}" target="_blank">See Statistics</a></li>
-				<li><a ng-href="{{value.html_url}}" target="_blank">View on Github</a></li>
-			</ul>
-		</div>
-	</div>
+    <div class="info-container">
+      <h2>
+        <a class="title-link" ng-href="{{value.html_url}}" target="_blank">{{value.full_name}}</a>
+      </h2>
+      <p>Author: {{value.owner.login}}</p>
+      <p>Created: {{ value.created_at | date:'d' | ordinal}} {{ value.created_at | date : "MMM yyyy 'at 'HH:mm" }}</p>
+      <p>Score: {{value.score}}</p>
+      <p>Forks: {{value.forks_count}}</p>
+      <p>Stargazers: {{value.stargazers_count}}</p>
+
+      <ul>
+        <li><a ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/post/#{{key}}">Issues: {{value.open_issues}}</a></li>
+        <li><a ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/charts/#{{key}}">See Statistics</a></li>
+      </ul>
+    </div>
+  </div>
 
 </div>
