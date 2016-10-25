@@ -22,10 +22,11 @@
       <p>Score: {{value.score}}</p>
       <p>Forks: {{value.forks_count}}</p>
       <p>Stargazers: {{value.stargazers_count}}</p>
+      <p>Open Issues: {{value.open_issues}}</p>
 
       <ul>
-        <li><a ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/post/#{{key}}">Issues: {{value.open_issues}}</a></li>
-        <li><a ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/charts/#{{key}}">See Statistics</a></li>
+        <li><a class="issues-link" ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/post/#{{key}}">See Issues</a></li>
+        <li><a class="charts-link" ng-click="$window.scrollTo(0, 0); getName(value.full_name)" ng-href="/#/charts">See Statistics</a></li>
       </ul>
     </div>
   </div>

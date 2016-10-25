@@ -4,6 +4,7 @@
 
 ******************************************************************/
 
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -12,68 +13,56 @@ POSTS & CONTENT STYLES
 /*********************
 GitHub Feed
 *********************/
+
 .container {
-	width: 480px;
-	.image-container {
-		margin-right: 4%;
-	}
-	.info-container {
-		width: 66%;
-
-	}
-
-.feed-container {
-
-	.image-container, .info-container {
-		float: left; 
-	}
-
-	.image-container {
-		margin: 0;
-		width: 30%;
-		margin-right: 20px;
-    backface-visibility: hidden;
-	}
-
-	.info-container {
-		width: 60%;
-		text-align: left;
-	}
-}
-
-.post-container {
-  padding: 15px 6px;
-
-
-
-	.info-container {
-		width: 100%;
-		ul li {
-			display: inline-block;
-			padding-left: 0;
-			border-left: 0px;
-			&:first-child {
-				border-right: 1px solid $text-color;
-				padding-right: 8px;
-			}
-			&:last-child {
-				padding-left: 4px;
-			}
-		}
-	}
-
-	.image-container {
-		width: 50%;
-		float: left;
-	}
-
-	.tag-container {
-		float: left;
-
-	}
-
-
+  width: 480px;
+  .image-container {
+    margin-right: 4%;
+  }
+  .info-container {
+    width: 100%;
+  }
+  .feed-container {
+    .image-container,
+    .info-container {
+      float: left;
+    }
+    .image-container {
+      margin: 0;
+      width: 30%;
+      margin-right: 20px;
+      backface-visibility: hidden;
+    }
+    .info-container {
+      width: 60%;
+      text-align: left;
+    }
+  }
+  .post-container {
+    padding: 15px 6px;
+    .info-container {
+      width: 100%;
+      ul li {
+        display: inline-block;
+        padding-left: 0;
+        border-left: 0px;
+        &:first-child {
+          border-right: 1px solid $text-color;
+          padding-right: 8px;
+        }
+        &:last-child {
+          padding-left: 4px;
+        }
+      }
+    }
+    .image-container {
+      width: 50%;
+      float: left;
+    }
+    .tag-container {
+      float: left;
+    }
+  }
 }
 
 
-}

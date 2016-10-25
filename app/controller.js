@@ -127,9 +127,6 @@
 
 		}
 		$scope.post = $location.hash();
-
-		$scope.obj = $rootScope.loadingBay[$scope.post];
-		console.log($scope.obj);
 		$scope.data = [];
 		$scope.barData = [];
 		$scope.pieData = [];

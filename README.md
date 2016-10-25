@@ -4,7 +4,7 @@
 npm install
 ```
 
-2) To create build directory run
+2) To create build directory run (naturally this will not work locally due to path names, it is meant only for deployment. If you want to view locally run 'gulp' command)
 ```bash
 gulp build
 ```

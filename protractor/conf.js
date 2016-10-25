@@ -5,7 +5,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  specs: ['flickr-spec.js'],
+  specs: ['git-spec.js'],
 
   jasmineNodeOpts: {
     showColors: true

@@ -131,7 +131,7 @@ gulp.task('protractor', function(callback) {
             'configFile': 'protractor/conf.js',
             'args': ['--baseUrl', 'http://127.0.0.1:8000'],
             'autoStartStopServer': true,
-            'debug': true
+            'debug': false
         }))
         .on('error', function(e) {
             throw e;
