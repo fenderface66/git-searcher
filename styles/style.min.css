@@ -142,8 +142,8 @@ a:link,a:visited:link{-webkit-tap-highlight-color:rgba(0,0,0,.3)}
 .container .info-container ul li a{text-decoration:underline}
 .container .info-container ul li:first-child{margin-top:0}
 .container .info-container ul li:last-child{margin-bottom:0}
-.top-container .charts-link{color:#fff;font-size:1.2em;display:inline-block;position:absolute;right:20px;top:5px}
-.top-container .charts-link:hover{color:#fff}
+.top-container .stats-link{color:#fff;font-size:1.2em;display:inline-block;position:absolute;right:20px;top:5px}
+.top-container .stats-link:hover{color:#fff}
 .info-container .back{padding:5px 15px;border-radius:6px;position:absolute;display:block;top:5px;right:0;transition:.2s;margin-bottom:20px}
 .info-container .back:hover{background-color:#d7d9de}
 .issue-container{text-align:left;padding:10px 6px}
