@@ -24,7 +24,8 @@
 		$rootScope.test = "test";
 		$scope.tags = [];
 		$scope.post = $location.hash();
-
+		
+		//Get data from url
 		gitData.query('GET', 'search/repositories', request, {})
 			.then(function(obj) {
 			$scope.obj = obj.data;
@@ -38,6 +39,8 @@
 
 		})
 		$scope.filtered = false;
+		
+		//Load more posts.
 		$rootScope.loadMore = function loadMore(all) {
 			var counter = 0;
 			if (all === true && $scope.filtered === false || all !== true) {
@@ -82,7 +85,8 @@
 		var self = this;
 		console.log($rootScope);
 		console.log("Running issues");
-
+		
+		//Check to see if post object is available
 		if ($rootScope.fullName === undefined) {
 			$location.path("")
 			$location.search({});
@@ -121,13 +125,15 @@
 	function ChartsController(LocalStorage, gitData, $scope, $location, $rootScope) {
     window.scrollTo(0, 0)
 		var self = this;
-
-		$scope.post = $location.hash();
+		
+		// Create arrays for chart data
 		$scope.data = [];
 		$scope.barData = [];
 		$scope.pieData = [];
 		$scope.horData = [];
 		$scope.labels = [];
+		
+		//Fill data arrays from loading bay
 		angular.forEach($rootScope.loadingBay, function(value, key) {
 				
 			this.push(value.forks);
