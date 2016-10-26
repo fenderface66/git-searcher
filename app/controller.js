@@ -12,7 +12,6 @@
 
 	function MainController(LocalStorage, gitData, $scope, $location, $window, $rootScope) {
 
-		console.log("Running Home");
 		var self = this;
 
 		var request = {
@@ -29,7 +28,6 @@
 		gitData.query('GET', 'search/repositories', request, {})
 			.then(function(obj) {
 			$scope.obj = obj.data;
-			console.log($scope.obj);
 			angular.forEach($scope.obj.items, function(value, key) {
 
 				key < 5 && $scope.items.push(value)
@@ -54,7 +52,6 @@
 							counter = 0;
 						}
 					} else if (all === true) {
-						console.log('hello');
 						if (key === $scope.items.length + 1) {
 							this.push(value);
 							$scope.filtered = true;
@@ -64,9 +61,8 @@
 			}
 		}
 
+		//Store fullName of clicked post
 		$rootScope.getName = function getName(fullName) {
-			console.log("running getName()");
-			console.log(fullName);
 			$rootScope.fullName = fullName;
 		}
 	}
@@ -83,8 +79,6 @@
 
 	function IssuesController(LocalStorage, gitData, $scope, $location, $window, $rootScope) {
 		var self = this;
-		console.log($rootScope);
-		console.log("Running issues");
 		
 		//Check to see if post object is available
 		if ($rootScope.fullName === undefined) {
@@ -98,13 +92,11 @@
 		$scope.filtered = false;
 
 		$scope.getIssues = function getIssues(fullName) {
-			console.log(fullName);
 			gitData.query('GET', 'search/issues', {
 				q: fullName
 			}, {})
 				.then(function(obj) {
 				$scope.issues = obj.data.items;
-				console.log($scope.issues);
 				$scope.test = "test";
 
 			})

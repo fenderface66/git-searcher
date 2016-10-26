@@ -31,7 +31,6 @@
                 params: params,
                 data: data
             }).then(function(data) {
-                console.log(data);
 
                 if (!data.config) {
                     console.log('Server error occured.');
