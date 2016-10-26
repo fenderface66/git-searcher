@@ -18,7 +18,7 @@ npm-install-missing
 gulp
 ```
 
-3) To begin e2e protractor testing run
+3) To begin e2e protractor testing run (You will need to make sure Java is installed on your machine)
 ```bash
 gulp test
 ```
